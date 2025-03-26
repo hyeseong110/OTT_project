@@ -167,7 +167,7 @@
 ### 🛒 장바구니
 
 <details>
-<summary>상품페이지</summary>
+<summary>장바구니</summary>
 
 <br>
    
@@ -195,83 +195,6 @@
 
 </details>
 
-<details>
-<summary>카카오페이</summary>
-
-<br>
-   
-- 2단계에서 카카오페이를 선택할 시 카카오페이 API에서 제공하는 결제페이지로 이동한 후, 모바일로 결제를 진행합니다.
-- 결제방법이 카카오페이로 데이터베이스에 저장되며, 마찬가지로 장바구니 데이터를 삭제합니다.
-
-![Image](https://github.com/user-attachments/assets/911dce44-bf79-42f2-a2dd-b4e2816fc498)
-
-</details>
-
-<details>
-<summary>결제내역 페이지</summary>
-
-<br>
-   
-- 결제내역 페이지에서는 결제한 목록들을 볼 수 있고, 결제 수단별, 시간별 정렬기능을 구현했습니다.
-<br>
-- 밑에 영상은 결제 기능의 풀영상입니다. 
-
-![Image](https://github.com/user-attachments/assets/2021c2ce-a856-44ae-8396-56c730f2b97b)
-
-</details>
-
-<br>
-
-### 📋 게시판
-
-<details>
-<summary>게시판</summary>
-
-<br>
-   
-- 왼쪽 프로필 영역은 로그인시 저장된 쿠키를 가져와서 로그인 상태를 구분해 구현했습니다.
-- 게시글 목록은 페이지으로 구현되어있습니다.
-- 모든 회원이 작성한 게시글을 볼 수 있으며, 작성된 글의 카테고리별 정렬기능을 통해 볼 수 있습니다.
-- 게시글 수정과 삭제는 내가 작성한 글만 가능하고, 게시글 작성 시 카테고리 선택을 모달창 형식으로 나타내 모달창의 상태를 useState로 관리합니다.
-
-<br>
-- 게시글 작성
-  
-![Image](https://github.com/user-attachments/assets/7a44d0d6-e201-4fa2-abbd-fb89a5b5da9b)
-
-<br>
-- 게시글 열람
-
-![Image](https://github.com/user-attachments/assets/40e0e84e-4074-476e-96c5-8a1f71d05b3c)
-
-</details>
-
-<details>
-<summary>댓글</summary>
-
-<br>
-   
-- 게시판과 마찬가지로 댓글의 수정,삭제도 본인의 글만 가능합니다.
-- 댓글 목록을 페이징으로 구현하여 사용자가 보기 편리하게 구현했습니다.
-
-![Image](https://github.com/user-attachments/assets/c043590e-1bf2-4ad2-8cc1-796553f53b6d)
-
-</details>
-<br>
-
-### 🤖 챗봇, KOMORAN
-
-<details>
-<summary>챗봇</summary>
-
-<br>
-   
-- 코모란 형태소 분석기를 활용하여 사용자가 검색한 키워드를 확인 후 데이터를 제공합니다.
-- 일반 페이지의 레이아웃 위에 나타납니다.
-
-![Image](https://github.com/user-attachments/assets/34204640-6cdf-458a-a439-2ddc387108cf)
-
-</details>
 <br>
 
 ### 🛠️ 관리자페이지
@@ -289,60 +212,3 @@
 
 </details>
 <br>
-
-### 💡 추가 활용한 Open API
-
-<details>
-<summary>카카오맵 API</summary>
-
-<br>
-   
-- 고객센터 페이지를 만들어 회사위치와 전화번호를 확인할 수 있고 지도와 마커를 구현했습니다.
-
-![Image](https://github.com/user-attachments/assets/c5d1ec7a-f7b5-45d5-be6f-7a2b73f1db4a)
-
-</details>
-
-<details>
-<summary>고용24 API</summary>
-
-<br>
-   
-- 고용24 API를 이용해 공채속보 데이터를 가져오고, xml형식의 데이터를 xmlMapper를 통해 json으로 변환 후 React 프론트 페이지에서 공채속보를 열람할 수 있습니다.
-
-![Image](https://github.com/user-attachments/assets/651f77a1-fdef-4274-83ac-9eeadd24a0c6)
-
-</details>
-<br>
-
-### 배포와 CICD
-
-<details>
-<summary>Docker, CICD</summary>
-
-<br>
-   
-- 프론트, 백엔드 개발환경이 달라 DockerFile을 따로 작성 후 image를 만들고 배포합니다.
-- 배포된 image는 EC2에서 pull해서 실행합니다.
-- image를 빌드하고 배포하는 과정을 github actions를 통해 자동화합니다.
-
-<img src="https://github.com/user-attachments/assets/2e84381b-7850-4c89-be8c-9dd7f32b8d04" width="400px">
-<br>
-
-- github actions를 통해 배포되는 영상입니다.
-
-![Image](https://github.com/user-attachments/assets/a174ad93-07d1-4061-9936-5cd953429a0c)
-  
-</details>
-
-<details>
-<summary>S3</summary>
-
-<br>
-   
-- 프로젝트 진행 중 필요한 이미지나 프로필 수정, 게시글 이미지 첨부를 할 시 이미지의 관리가 용이하며 보안이 좋은 S3를 사용해 파일 수정, 삭제를 합니다.
-- 프론트에서 파일 입력 필드를 통해 백엔드 서버로 이미지를 전송하게 되면 백엔드에서 만든 S3Service와 S3Config 클래스를 통해 S3에 파일을 저장합니다.
-
-![Image](https://github.com/user-attachments/assets/97cb4f40-b592-4d92-9ba5-0383e74098ad)
-
-</details>
