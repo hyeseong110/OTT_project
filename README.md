@@ -171,27 +171,26 @@
 
 <br>
    
-- 멘토회원이 등록한 상품을 볼 수 있으며 가격과 카테고리를 확인할 수 있습니다.
-- 원하는 상품을 장바구니에 담을 수 있고, 장바구니에 담을 시 데이터베이스에 장바구니정보를 저장합니다.
-- Redux slice를 이용해 백엔드 서버에서 장바구니 정보를 가져오고 아이템 선택,전체삭제를 할 수 있습니다.
+- `Redux slice`로 장바구니 `slice`를 만들어 장바구니에 추가된 상품을 전역 설정합니다.
+- 수량 조절과 선택, 전체삭제를 할 수 있도록 `reducer`를 만들어 구현됩니다.
+- 상품의 이미지와, 수량, 가격을 확인할 수 있습니다.
 
-![Image](https://github.com/user-attachments/assets/fef0e087-9542-4f1c-8555-6e689f9df0d5)
+![제목-없는-동영상-Clipchamp로-제작-_1_](https://github.com/user-attachments/assets/a5088be0-191c-4002-a4ac-d0024e90cd22)
 
 </details>
 <br>
 
-### 💰 결제, 카카오페이
+### 💰 결제
 
 <details>
 <summary>결제</summary>
 
 <br>
    
-- 결제페이지는 총 3단계로 나뉘어 있으며, 각 단계별 컴포넌트로 구분하여 관리했습니다.
-- useState로 단계별 상태를 관리해 각 단계로 이동할 수 있고, 주문자의 정보확인, 결제방법 선택, 결제완료로 구분됩니다.
-- 결제정보는 데이터베이스에 저장되며, 결제 성공 시 장바구니 데이터와, 장바구니 Slice 아이템이 삭제됩니다.
+- 결제페이지에서 장바구니 `slice`에 저장된 상품 데이터를 가져와 `useSelector`로 가져옵니다.
+- 결제방법, 주문처 선택, 주문자 정보를 지정할 수 있고 결제 성공 시 `JSON server`에 결제 정보가 저장됩니다.
 
-![Image](https://github.com/user-attachments/assets/d996af72-08a5-4d9f-aea6-fbe6f6cac506)
+![결제](https://github.com/user-attachments/assets/579e9714-c938-4b90-b21e-b89c4aa34e5b)
 
 </details>
 
