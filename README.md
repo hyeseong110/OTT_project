@@ -196,6 +196,23 @@
 
 <br>
 
+### 주문처페이지
+
+<details>
+<summary>주문처</summary>
+
+<br>
+   
+- 카카오맵 API를 활용해 페이지 내에 지도와 마커를 구현합니다.
+- 지도 오른쪽 지점을 선택하면 지도의 중심이 이동되며 마커가 생성됩니다.
+- 마커를 클릭하면 해당 지점의 상세정보를 볼 수 있도록 모달창이 나타나고, 모달창의 상태는 `useState`로 관리됩니다.
+
+![2025-03-26-10-37-27](https://github.com/user-attachments/assets/56d2f131-ca59-4c3d-9643-6aa5d1eec335)
+
+</details>
+
+<br>
+
 ### 🛠️ 관리자페이지
 
 <details>
@@ -203,11 +220,10 @@
 
 <br>
 
-- 일반 페이지와 구분되도록 레이아웃을 변경해 헤더대신 왼쪽 메뉴바가 나타납니다
-- 관리자 페이지는 회원,상품,결제 등 항목별로 페이지로 나뉘고 왼쪽에 메뉴를 클릭 시 각 페이지가 렌더링됩니다.
-- 각 페이지는 목록이 페이징으로 구현되었고, 기본적인 CRUD가 전부 가능합니다.
+- 관리자 페이지는 회원,상품,결제 등 항목별로 페이지로 나뉘고 왼쪽에 메뉴를 클릭 시 각 페이지가 렌더링되도록 `component`로 구분됩니다.
+- 각 페이지에서는 기본적인 CRUD가 전부 가능합니다.
 
-![Image](https://github.com/user-attachments/assets/d8d19f7f-cce5-489d-aafc-d642150a486e)
+![image](https://github.com/user-attachments/assets/4a06630e-b873-439f-8864-e30c0cd25aee)
 
 </details>
 <br>
